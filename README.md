@@ -11,3 +11,4 @@ To run this pipeline from scratch, execute the Python scripts in the following s
 4. **`calculate_rul.py`** – Computes the target Remaining Useful Life (RUL) for each engine cycle.
 5. **`train_model.py`** – Trains the baseline Random Forest model.
 6. **`evaluate_model.py`** – Evaluates model performance on the test set and outputs metrics.
+7. **`model_eval_results.py`** - Record of model's metric results. 
