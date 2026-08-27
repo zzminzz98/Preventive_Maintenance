@@ -1,0 +1,14 @@
+naked model 
+MODEL EVALUATION RESULTS (FD001 Test Set)
+2026-08-26 16:22:28,944 - INFO - Root Mean Squared Error (RMSE): 34.0319 cycles
+2026-08-26 16:22:28,944 - INFO - Mean Absolute Error (MAE): 24.5983 cycles
+2026-08-26 16:22:28,944 - INFO - Coefficient Score (R2): 0.3293
+2026-08-26 16:22:28,944 - INFO - ====================================================================================================
+2026-08-26 16:22:28,946 - INFO - Sample prediction comparison (First 5 engine):
+   unit_number  true_rul  predicted_rul  error
+0            1       112          169.4   57.4
+1            2        98          147.0   49.0
+2            3        69           58.1  -10.9
+3            4        82          106.3   24.3
+4            5        91          119.3   28.3
+2026-08-26 16:22:28,946 - INFO - ====================================================================================================
