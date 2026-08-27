@@ -11,3 +11,16 @@ Baseline Model Performance (No Features)
 3            4        82          106.3   24.3
 4            5        91          119.3   28.3
 2026-08-26 16:22:28,946 - INFO - ====================================================================================================
+
+Baseline Model Performance (With Clipping)
+2026-08-27 12:20:35,925 - INFO - Root Mean Squared Error (RMSE): 18.1116 cycles
+2026-08-27 12:20:35,925 - INFO - Mean Absolute Error (MAE): 13.2036 cycles
+2026-08-27 12:20:35,925 - INFO - Coefficient Score (R2): 0.8100
+2026-08-27 12:20:35,925 - INFO - ====================================================================================================
+2026-08-27 12:20:35,927 - INFO - Sample prediction comparison (First 5 engine):
+   unit_number  true_rul  predicted_rul  error
+0            1       112          119.9    7.9
+1            2        98          119.3   21.3
+2            3        69           68.7   -0.3
+3            4        82           91.1    9.1
+4            5        91           98.3    7.3
