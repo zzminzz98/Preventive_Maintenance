@@ -9,7 +9,7 @@ DATABASE_NAME = 'cmapss.db'
 SOURCE_TABLE = 'train_fd001'
 TARGET_TABLE = 'train_fd001_w_rul'
 
-def calculate_rul_pipeline():
+def calculate_rul_pipeline(max_rul=125):
     try:
         # 1.Connect SQL database
         logger.info(f"Connect to database: {DATABASE_NAME}")
@@ -40,6 +40,9 @@ def calculate_rul_pipeline():
 
         # Calculate rul: Max cycle - Current cycle
         df['rul'] = df['max_cycle'] - df['cycle']
+
+        # Apply RUL clipping
+        df['rul'] = df['rul'].clip(upper=max_rul)
 
         # Drop max_cycle column to keep schema clean
         df.drop(columns=['max_cycle'], inplace=True)

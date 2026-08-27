@@ -1,5 +1,4 @@
-naked model 
-MODEL EVALUATION RESULTS (FD001 Test Set)
+Baseline Model Performance (No Features)
 2026-08-26 16:22:28,944 - INFO - Root Mean Squared Error (RMSE): 34.0319 cycles
 2026-08-26 16:22:28,944 - INFO - Mean Absolute Error (MAE): 24.5983 cycles
 2026-08-26 16:22:28,944 - INFO - Coefficient Score (R2): 0.3293
