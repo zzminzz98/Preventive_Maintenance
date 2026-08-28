@@ -48,8 +48,7 @@ logger = setup_logger(__name__)
 #     sensor_18 REAL,
 #     sensor_19 REAL,
 #     sensor_20 REAL,
-#     sensor_21 REAL,
-#     sensor_22 REAL
+#     sensor_21 REAL
 #
 # )
 
@@ -84,7 +83,7 @@ def save_data_to_sqlite():
         logger.info("Database migration complete!")
 
     except Exception as e: 
-            logger.error(f"An error occured during database migration: {e}")
+        logger.error(f"An error occured during database migration: {e}")
     
     finally:
         # Ensure database connection always closes safely

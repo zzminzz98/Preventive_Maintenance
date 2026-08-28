@@ -8,7 +8,7 @@ logger = setup_logger(__name__)
 
 # Connect and load SQL database
 DATABASE_NAME = 'cmapss.db'
-TABLE_NAME = 'train_fd001_w_rul'
+TABLE_NAME = 'train_fd001_features'
 MODEL_FILENAME = 'random_forest_baseline.pkl'
 
 def train_baseline_model():

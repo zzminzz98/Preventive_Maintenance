@@ -21,7 +21,7 @@ def calculate_rul_pipeline(max_rul=125):
         df = pd.read_sql(f"SELECT * FROM {SOURCE_TABLE}",conn)
 
         if df.empty:
-            logger.warning("The source table is empty. Please check ingestion in ***sql_dataset.py***.")
+            logger.warning("The source table is empty. PLEASE check ingestion in ***sql_dataset.py***.")
             return
 
         logger.info(f"Successfully loaded {len(df):,} rows.")
@@ -55,7 +55,7 @@ def calculate_rul_pipeline(max_rul=125):
         logger.info(f"Writing transformed data to *{TARGET_TABLE}*")
         df.to_sql(TARGET_TABLE, conn, if_exists='replace', index=False)
 
-        logger.info("Pipeline completed successfully! New table stored in SQLite.")
+        logger.info(f"New table ({TARGET_TABLE}) stored in SQLite.")
         logger.info("="*100)
 
     except Exception as e: 
