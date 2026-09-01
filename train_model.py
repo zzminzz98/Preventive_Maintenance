@@ -50,7 +50,19 @@ def train_baseline_model():
         model.fit(X,y)
         logger.info("Model training completed successfully!")
 
-        # 3. Save model artifact
+        # 3. Extract and log top feature importances
+        importances = model.feature_importances_
+        feature_names = X.columns
+
+        feature_importance_df = pd.DataFrame({
+            'Feature': feature_names,
+            'Importance': importances
+        }).sort_values(by='Importance', ascending=False)
+
+        logger.info("="*100)
+        logger.info("Top 10 Most Important Features:\n%s", feature_importance_df.head(10).to_string())
+
+        # 4. Save model artifact
         logger.info("="*100)
         logger.info(f"Saving model artifact to {MODEL_FILENAME}")
         # Load trained model easily 

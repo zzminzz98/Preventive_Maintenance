@@ -26,7 +26,16 @@ To run this pipeline from scratch, execute the Python scripts in the following s
 | **Clipping-Only Baseline** | **18.11** | **13.20** | **0.8100** |
 | **Clipping + Rolling Windows (5-cycle)** | 19.18 | 14.00 | 0.7870 |
 
-* **Key Takeaway**: The clipping-only baseline generalized better on the test set. While rolling windows capture short-term momentum, they also introduced minor feature noise and dimensionality overhead for this specific Random Forest configuration.
+* **Key Takeaway**: The clipping-only baseline generalized better on the test set. While rolling windows capture short-term momentum, they also introduced minor feat.
+
+---
+
+## Feature Importance & Analytical Insights
+
+Extracting feature importances from the trained Random Forest model revealed a striking dominance of temporal trends: **`sensor_4_roll_mean` alone accounts for over 61% of the model's total decision-making power**, followed by sensors 9, 11, and 14. 
+
+* **The Dominance of Exhaust Temperature Trends**: In the C-MAPSS dataset, Sensor 4 measures core engine exhaust temperature, which exhibits a strong, continuous upward drift as degradation accumulates. The Random Forest naturally prioritizes features that display these smooth, monotonic trajectories.
+* **The Training vs. Generalization Paradox**: Although rolling means captured over 90% of the top feature importances during training, the *clipping-only baseline* ultimately generalized better on unseen test data (RMSE 18.11 vs. 19.18). While rolling features provide rich historical momentum, they also introduce dimensionality overhead and localized noise that can slightly impair final-cycle test predictions on unseen engines.
 
 ---
 

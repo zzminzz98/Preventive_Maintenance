@@ -37,3 +37,16 @@ MODEL EVALUATION RESULTS (Rolling Mean and Std)
 2            3        69           46.1  -22.9
 3            4        82           84.9    2.9
 4            5        91          101.5   10.5
+
+Top 10 Most Important Features:
+                Feature  Importance
+30   sensor_4_roll_mean    0.617455
+40   sensor_9_roll_mean    0.094584
+44  sensor_11_roll_mean    0.076799
+50  sensor_14_roll_mean    0.016197
+52  sensor_15_roll_mean    0.014519
+64  sensor_21_roll_mean    0.011934
+36   sensor_7_roll_mean    0.011315
+46  sensor_12_roll_mean    0.009896
+62  sensor_20_roll_mean    0.009344
+26   sensor_2_roll_mean    0.007737
